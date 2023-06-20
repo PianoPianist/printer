@@ -1,0 +1,121 @@
+body{
+  text-align: center;
+}
+@font-face{
+  font-family: "Satoshi-mid";
+  src:url("Satoshi-Medium.otf")
+}
+@font-face{
+  font-family: "Satoshi-reg";
+  src: url("Satoshi-Regular.otf");
+}
+@font-face{
+  font-family: "Satoshi-bol";
+  src: url("Satoshi-Bold.otf");
+}
+h1 {
+    font-family: 'Satoshi-bol';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.print{
+  
+font-family: 'Satoshi-mid';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+margin-top: -80px;
+color: #1E1E1E;
+
+}
+.draging {
+  transform: scale(1.1);
+}
+#preview {
+  text-align: center;
+  img {
+    max-width: 100%
+  }
+}
+
+
+.container {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  color: #999;
+  border: 2px dashed ;
+  display: inline-block;
+  border-radius: 40px;
+  transition: transform 0.3s;
+  input[type="file"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+}
+
+.context{
+  font-family: 'Satoshi-reg';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 86px;
+text-align: center;
+margin-top: 20%;
+color: #6C6C6C;
+}
+input[type="file"] {
+  display: none;
+}
+label {
+  display: block;
+  position: relative;
+  background: linear-gradient( 45deg, #FF0F7B, #F89B29) ; 
+  font-family: "Satoshi-reg";
+  color: #ffffff;
+  font-size: 1.1em;
+  text-align: center;
+  width: 16em;
+  padding: 1em 0;
+  border-radius: 0.3em;
+  margin: 1em auto 1em auto;
+  cursor: pointer;
+}
+
+#image-display {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.25em;
+  flex-wrap: wrap;
+}
+#image-display figure {
+  width: 45%;
+}
+#image-display img {
+  width: 50%;
+}
+#image-display figcaption {
+  font-size: 0.8em;
+  text-align: center;
+  color: #5a5861;
+}
+.active {
+  border: 0.2em dashed #025bee;
+}
+#error {
+  text-align: center;
+  color: #ff3030;
+}

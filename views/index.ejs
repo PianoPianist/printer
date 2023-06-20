@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Printer App</title>
+</head>
+<body>
+    <h1>Texturize</h1>
+    <p class="print">Print</p>
+    <div class="container">
+        <p class="context">Drag and Drop here</p>
+    </div>
+    <input type="file" id="upload-button" accept="image/*" />
+<label for="upload-button">
+  <i class="fa-solid fa-upload"></i>&nbsp; Choose Photo
+</label>
+
+<div id="error"></div>
+<div id="image-display"></div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    let uploadButton = document.getElementById("upload-button");
+let chosenImage = document.getElementById("chosen-image");
+let fileName = document.getElementById("file-name");
+let container = document.querySelector(".container");
+let error = document.getElementById("error");
+let imageDisplay = document.getElementById("image-display");
+
+
+
+
+uploadButton.addEventListener("change", () => {
+//   imageDisplay.innerHTML = "";
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({ variable: uploadButton.files }));
+  console.log(uploadButton.files,"fileeys")
+    // window.location.href="/process"
+
+
+    })
+
+container.addEventListener(
+  "dragenter",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.add("active");
+  },
+  false
+);container.addEventListener(
+  "dragleave",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.remove("active");
+  },
+  false
+);
+
+container.addEventListener(
+  "dragover",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.add("active");
+  },
+  false
+);
+container.addEventListener(
+  "drop",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.remove("active");
+    let draggedData = e.dataTransfer;
+    let files = draggedData.files;
+    
+    // imageDisplay.innerHTML = "";
+    var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/", true);
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.send(JSON.stringify({ variable: files }));   
+  console.log(files,"file")
+    window.location.href = '/process';
+    // document.querySelector(".wave").classList.add("yes")
+    // document.querySelector(".waveTop").classList.add("yes")
+    // document.querySelector(".waveBottom").classList.add("yes")
+    // Array.from(files).forEach((file) => {
+    //   fileHandler(file, file.name, file.type);
+
+    // });
+    
+  },
+  false
+);
+window.onload = () => {
+  error.innerText = "";
+};
+</script>
+

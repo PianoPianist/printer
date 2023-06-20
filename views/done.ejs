@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done</title>
+</head>
+<body>
+    <script type="text/javascript">
+          
+  const fileHandler = (file, name, type) => {
+    if (type.split("/")[0] !== "image") {
+      //File Type Error
+      error.innerText = "Please upload an image file";
+      return false;
+    }
+    else{
+      error.innerText = "";
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onloadend = () => {
+    //image and file name
+    let imageContainer = document.createElement("figure");
+    let img = document.createElement("img");
+    img.src = reader.result;
+    imageContainer.appendChild(img);
+    imageContainer.innerHTML += `<figcaption>${name}</figcaption>`;
+    imageDisplay.appendChild(imageContainer);
+
+    fileHandler(<%=arrim%>,<%=arrim.name%>,<%=arrim.type%>)
+  };
+    }}
+    
+    </script>
+</body>
+</html>
