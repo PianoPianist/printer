@@ -14,9 +14,9 @@ body{
   src: url("Satoshi-Bold.otf");
 }
 h1 {
+    margin-top: -15px;
     font-family: 'Satoshi-bol';
     font-style: normal;
-    font-weight: 700;
     font-size: 96px;
     background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
     -webkit-background-clip: text;
@@ -81,7 +81,7 @@ label {
   display: block;
   position: relative;
   background: linear-gradient( 45deg, #FF0F7B, #F89B29) ; 
-  font-family: "Satoshi-reg";
+  font-family: "Satoshi-bol";
   color: #ffffff;
   font-size: 1.1em;
   text-align: center;
@@ -92,25 +92,68 @@ label {
   cursor: pointer;
 }
 
-#image-display {
+
+
+.image-display {
+  width: 400px;
+  height: 450px;
+  /* background-color: cyan; */
+  border: #F89B29  2px solid;
+  margin-left: 28em;
+  margin-top: 7em;
+  border-radius: 22px;
   position: relative;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1.25em;
-  flex-wrap: wrap;
+  background-color: red;
 }
-#image-display figure {
-  width: 45%;
+.image-display img {
+    height: 450px; 
+    width: 400px;
+  position: relative;
+  border-radius: 20px;
+  display: inline-block;
+
+} 
+
+ .image-display2 {
+  width: 400px;
+  height: 450px;
+  border: #F89B29  2px solid;
+  margin-left: 57em;
+  margin-top: -28.25em;
+  position: relative;
+  border-radius: 22px;
+
 }
-#image-display img {
-  width: 50%;
+
+.image-display2 img {
+height: 450px; 
+width: 400px;
+
+border-radius: 20px;
+
+filter: grayscale(100%);
+
+} 
+
+
+.imagetxt{
+  font-family:"Satoshi-reg";
+  font-size: 64px;
+  text-align: left;
+  top:-1.5em
 }
-#image-display figcaption {
-  font-size: 0.8em;
-  text-align: center;
-  color: #5a5861;
+
+.txt1{
+  
+  position: absolute;
+  display: inline-block;
+  left: 2em;
+}
+.txt2{
+  position: absolute;
+  display: inline-block;
+  left:8em;
+  white-space: nowrap
 }
 .active {
   border: 0.2em dashed #025bee;
@@ -118,4 +161,124 @@ label {
 #error {
   text-align: center;
   color: #ff3030;
+}
+.logo{
+  font-family: 'Satoshi-bol';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+  display:inline-block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #333; */
+  padding: 5px 20px 0 20px;
+}
+
+/* Style the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: black;
+  font-size: 40px;
+  font-family: "Satoshi-mid";
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: gray;
+}
+
+.dont{
+  display: none;
+}
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1.5)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(2.5)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(4.2)
+      
+  }
+}
+
+@keyframes move_wave2 {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1.5)
+  }
+  50% {
+      transform: translateX(25%) translateZ(0) scaleY(2.5)
+  }
+  100% {
+      transform: translateX(50%) translateZ(0) scaleY(4.2)
+      
+  }
+  
+}
+.yes.wave {
+  display:inline block;
+  position: absolute;
+  top:8%;
+  width: 50%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 ;
+  transform-origin: center ;
+  overflow: hidden;
+}
+.yes.waveTop {
+  display:inline block;
+  background-size: 50% 100px;
+  /* width:100%; */
+  position: absolute;
+  overflow: hidden;
+  display:inline block;
+ animation: move_wave2 3s linear;
+ left:0;
+}
+.yes.waveBottom {
+  display:inline block;
+  background-size: 50% 100px;
+  position: absolute;
+  /* width:100%; */
+  animation-play-state: paused;
+  animation: move_wave 3s linear; 
+  overflow: hidden;
+  right:50px;
+}
+
+.circ{
+  position:absolute;
+  width:100%; height:800px;
+  left:0;
+  margin:auto auto;
+  overflow:hidden;
+}
+.circ:after{
+  content:'';
+  position:absolute;
+  left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+   top:25px;
+  border-radius:100%;
+  width:150px; height:150px;
+  box-shadow: 0px 0px 0px 2000px white;
 }

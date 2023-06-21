@@ -24,77 +24,68 @@ body{
       -webkit-text-fill-color: transparent;
     }
 
-@keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1.5)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(2.5)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(4.5)
-        
-    }
-  }
-  
-  @keyframes move_wave2 {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1.5)
-    }
-    50% {
-        transform: translateX(25%) translateZ(0) scaleY(2.5)
-    }
-    100% {
-        transform: translateX(50%) translateZ(0) scaleY(4.5)
-        
-    }
-    
-  }
-.wave {
-    display:inline block;
-    position: absolute;
-    top:8%;
-    width: 100%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 ;
-    transform-origin: center ;
-    overflow: hidden;
-  }
-.waveTop {
-    display:inline block;
-    background-size: 50% 100px;
-    /* width:100%; */
-    overflow: hidden;
-    display:inline block;
-   animation: move_wave2 2s linear;
-  }
-.waveBottom {
-    display:inline block;
-    background-size: 50% 100px;
-    /* width:100%; */
-    animation-play-state: paused;
-    animation: move_wave 2s linear; 
-    overflow: hidden;
-  }
-
-  .circ{
-    position:absolute;
-    width:100%; height:800px;
-    left:0;
-    margin:auto auto;
-    overflow:hidden;
-}
-.circ:after{
-    content:'';
-    position:absolute;
-    left:0;
-right:0;
-margin-left:auto;
-margin-right:auto;
-     top:25px;
-    border-radius:100%;
-    width:150px; height:150px;
-    box-shadow: 0px 0px 0px 2000px white;
+.logo{
+  font-family: 'Satoshi-bol';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+  display:inline-block;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #333; */
+  padding: 5px 20px 0 20px;
+}
+
+/* Style the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: black;
+  font-size: 40px;
+  font-family: "Satoshi-mid";
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: gray;
+}
+
+.bar {
+  width: 50%;
+  height: 128px;
+  background-color: #E4E4E4;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(45deg, #FF0F7B, #F89B29 );
+  border-radius: 20px;
+  animation: progress 1s linear forwards;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}

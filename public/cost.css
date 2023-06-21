@@ -1,0 +1,106 @@
+body{
+    text-align: center;
+  }
+  @font-face{
+    font-family: "Satoshi-mid";
+    src:url("Satoshi-Medium.otf")
+  }
+  @font-face{
+    font-family: "Satoshi-reg";
+    src: url("Satoshi-Regular.otf");
+  }
+  @font-face{
+    font-family: "Satoshi-bol";
+    src: url("Satoshi-Bold.otf");
+  }
+  h1 {
+      margin-top: -15px;
+      font-family: 'Satoshi-bol';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 96px;
+      background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  .print{
+    
+  font-family: 'Satoshi-mid';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  margin-top: -80px;
+  color: #1E1E1E;
+  
+  }
+  .logo{
+    font-family: 'Satoshi-bol';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    display:inline-block;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+    padding: 5px 20px 0 20px;
+  }
+  
+  /* Style the navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: black;
+    font-size: 40px;
+    font-family: "Satoshi-mid";
+    text-decoration: none;
+  }
+  
+  .nav-links li a:hover {
+    color: gray;
+  }
+  .content{
+    color: #6C6C6C;
+    font-family: "Satoshi-reg";
+    font-size: 54px;
+    width:75%;
+    position: relative;
+    margin-left:-5%;
+    margin-top:5%;
+  }
+  .cost{
+    font-family: "Satoshi-reg";
+    font-size: 64px;
+    position: relative;
+    width:75%;
+    margin-left:-5%;
+  }
+
+  img{
+    height: 400px;
+    width: 400px;
+    border-radius:20px;
+    position: relative;
+  }
+  .outline{
+    height: 400px;
+    width: 400px;
+    margin-top: -17%;
+    margin-left:50%;
+    border-radius:22px;
+    border:solid 2px #FF0F7B;
+    position: fixed;
+  }

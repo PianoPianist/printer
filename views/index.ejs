@@ -8,101 +8,50 @@
     <title>Printer App</title>
 </head>
 <body>
-    <h1>Texturize</h1>
-    <p class="print">Print</p>
-    <div class="container">
-        <p class="context">Drag and Drop here</p>
-    </div>
-    <input type="file" id="upload-button" accept="image/*" />
-<label for="upload-button">
-  <i class="fa-solid fa-upload"></i>&nbsp; Choose Photo
-</label>
+    <nav>
+        <div class="navbar">
+          <a href="#" class="logo">Texturize</a>
+          <ul class="nav-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/cost">Cost</a></li>
+            <li><a href="/choose">Print</a></li>
+          </ul>
+        </div>
+      </nav>
+        
+      <h1 class="titlehead">Texturize</h1>
+      <p class="print">Print</p>
+      <div class="container">
+          <p class="context">Drag and Drop here</p>
+      </div>
+      <input type="file" id="upload-button" accept="image/*" />
+  <label for="upload-button">
+    <i class="fa-solid fa-upload"></i>&nbsp; Choose Photo
+  </label>
+  <h1 class="newtit dont">Processing</h1>
+    <div class="waveWrapper waveAnimation dont">
+          <div class="wave waveTop dont" style="background-image: url(wave_1.png)"></div>
+          <div class="wave waveBottom dont" style="background-image: url(wave_2.png)"></div>
+      </div>
+      <div class="circ dont">
 
-<div id="error"></div>
-<div id="image-display"></div>
+      </div>
+  
 
-</body>
-</html>
+  <div id="error"></div>
+  <div class="image-display dont">
+    <h1 class="imagetxt dont txt1">Image</h1>
+  <h1 class="imagetxt dont txt2">Height Map</h1>
+  <img class="normal"></img>
+  </div>
+   <div class="image-display2 dont"> 
+    <img class="bw"></img>
+  </div>
+  <label class="final dont">
+    Confirm
+  </label>
+  </body>
+  </html>
 
-<script type="text/javascript">
-    let uploadButton = document.getElementById("upload-button");
-let chosenImage = document.getElementById("chosen-image");
-let fileName = document.getElementById("file-name");
-let container = document.querySelector(".container");
-let error = document.getElementById("error");
-let imageDisplay = document.getElementById("image-display");
-
-
-
-
-uploadButton.addEventListener("change", () => {
-//   imageDisplay.innerHTML = "";
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify({ variable: uploadButton.files }));
-  console.log(uploadButton.files,"fileeys")
-    // window.location.href="/process"
-
-
-    })
-
-container.addEventListener(
-  "dragenter",
-  (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    container.classList.add("active");
-  },
-  false
-);container.addEventListener(
-  "dragleave",
-  (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    container.classList.remove("active");
-  },
-  false
-);
-
-container.addEventListener(
-  "dragover",
-  (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    container.classList.add("active");
-  },
-  false
-);
-container.addEventListener(
-  "drop",
-  (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    container.classList.remove("active");
-    let draggedData = e.dataTransfer;
-    let files = draggedData.files;
-    
-    // imageDisplay.innerHTML = "";
-    var xhr = new XMLHttpRequest();
-  xhr.open("POST", "/", true);
-  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  xhr.send(JSON.stringify({ variable: files }));   
-  console.log(files,"file")
-    window.location.href = '/process';
-    // document.querySelector(".wave").classList.add("yes")
-    // document.querySelector(".waveTop").classList.add("yes")
-    // document.querySelector(".waveBottom").classList.add("yes")
-    // Array.from(files).forEach((file) => {
-    //   fileHandler(file, file.name, file.type);
-
-    // });
-    
-  },
-  false
-);
-window.onload = () => {
-  error.innerText = "";
-};
+<script type="text/javascript" src="think.js">
 </script>
-

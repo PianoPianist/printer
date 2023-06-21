@@ -7,21 +7,21 @@
     <title>process</title>
 </head>
 <body>
-    <h1>Processing</h1>
-    <div class="waveWrapper waveAnimation">
-        <div class="waveWrapperInner">
-          <div class="wave waveTop" style="background-image: url(wave_1.png)"></div>
-        </div>
-        <div class="waveWrapperInner">
-          <div class="wave waveBottom" style="background-image: url(wave_2.png)"></div>
-        </div>
-      </div>
-      <div class="circ">
-
-      </div>
+  <nav>
+    <div class="navbar">
+      <a href="#" class="logo">Texturize</a>
+      <ul class="nav-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/cost">Cost</a></li>
+        <li><a href="/choose">Print</a></li>
+      </ul>
+    </div>
+  </nav>
+    <h1 class="fin">Printing Pages (1 of 1)</h1>
+    <div class="bar"></div>
       <script type="text/javascript">
         setTimeout(() => {
-            window.location.href = '/done';
+            document.querySelector(".fin").innerHTML="Printing Complete"
   }, 2000); // Delay in milliseconds (2 seconds)
       </script>
 </body>

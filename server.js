@@ -13,11 +13,11 @@ app.listen(3000,function(){
 })
 
 app.get("/",function(req,res){
-    res.render("index")
+    res.render("home")
 })
 
-app.post('/', (req, res) => {
-  arrim = req.body.variable;
+app.post('/print', (req, res) => {
+  arrim = req.body.photo;
   console.log(arrim,"arrim")
 })
 app.get("/process",function(req,res){
@@ -30,4 +30,20 @@ app.get("/process",function(req,res){
 app.get("/done",function(req,res){
   
   res.render("done",{arrim:arrim})
+})
+
+app.get("/about",function(req,res){
+  res.render("about")
+})
+
+app.get("/cost",function(req,res){
+  res.render("cost")
+})
+
+app.get("/choose",function(req,res){
+  res.render("choose")
+})
+
+app.get("/print",function(req,res){
+  res.render("index")
 })

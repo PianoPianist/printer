@@ -1,0 +1,88 @@
+body{
+    text-align: center;
+  }
+  @font-face{
+    font-family: "Satoshi-mid";
+    src:url("Satoshi-Medium.otf")
+  }
+  @font-face{
+    font-family: "Satoshi-reg";
+    src: url("Satoshi-Regular.otf");
+  }
+  @font-face{
+    font-family: "Satoshi-bol";
+    src: url("Satoshi-Bold.otf");
+  }
+  h1 {
+      font-family: 'Satoshi-bol';
+      font-style: normal;
+      font-size: 128px;
+      background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+    margin-top: 100px;
+    }
+.content{
+  color: #6C6C6C;
+  font-family: "Satoshi-reg";
+  font-size: 96px;
+  width:75%;
+  display: inline-block;
+  margin-top:-90px;
+}
+  .logo{
+    font-family: 'Satoshi-bol';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    background-image: linear-gradient(45deg, #FF0F7B, #F89B29 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    display:inline-block;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+    padding: 5px 20px 0 20px;
+  }
+  
+  /* Style the navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: black;
+    font-size: 40px;
+    font-family: "Satoshi-mid";
+    text-decoration: none;
+  }
+  
+  .nav-links li a:hover {
+    color: gray;
+  }
+
+  #myVideo {
+    position: fixed;
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+  	justify-content: center;
+  	align-items: center;
+    left: 600px;
+    top:-20px;
+  }
+  
+  /* Add some content at the bottom of the video/page */
