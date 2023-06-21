@@ -98,12 +98,12 @@ label {
   width: 400px;
   height: 450px;
   /* background-color: cyan; */
-  border: #F89B29  2px solid;
+  border: #FF0F7B  2px solid;
   margin-left: 28em;
   margin-top: 7em;
   border-radius: 22px;
   position: relative;
-  background-color: red;
+
 }
 .image-display img {
     height: 450px; 
@@ -117,7 +117,7 @@ label {
  .image-display2 {
   width: 400px;
   height: 450px;
-  border: #F89B29  2px solid;
+  border: #FF0F7B  2px solid;
   margin-left: 57em;
   margin-top: -28.25em;
   position: relative;

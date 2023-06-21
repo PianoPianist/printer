@@ -109,6 +109,9 @@ body{
     font-family: "Satoshi-reg";
     color:#6C6C6C;
   }
+  .item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover{
+      cursor: pointer;
+  }
 
   .item2{
     position: absolute;
