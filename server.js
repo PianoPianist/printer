@@ -16,33 +16,15 @@ app.get("/",function(req,res){
     res.render("home")
 })
 
-app.post('/print', (req, res) => {
-  arrim = req.body.photo;
-  console.log(arrim,"arrim")
-})
-app.get("/process",function(req,res){
-  console.log("done")
-  
-  res.render("process")
-
-});
-
-app.get("/done",function(req,res){
-  
-  res.render("done",{arrim:arrim})
-})
 
 app.get("/about",function(req,res){
   res.render("about")
 })
 
-app.get("/cost",function(req,res){
-  res.render("cost")
+app.get("/service",function(req,res){
+  res.render("service")
 })
 
-app.get("/choose",function(req,res){
-  res.render("choose")
-})
 
 app.get("/centres",function(req,res){
   res.render("centres")

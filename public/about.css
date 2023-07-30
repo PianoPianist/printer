@@ -31,9 +31,9 @@ font-family: 'Satoshi-mid';
 font-style: normal;
 font-weight: 500;
 font-size: 64px;
-margin-top: -80px;
-color: #1E1E1E;
-
+/* margin-top: -80px; */
+color: white;
+text-align:left;
 }
 .logo{
     
@@ -92,9 +92,39 @@ body{
 background-color:#00071c;
 }
 .content{
-  color: #6C6C6C;
+  color: white;
   font-family: "Satoshi-reg";
-  font-size: 54px;
+  font-size: 44px;
   width:75%;
-  display: inline-block
+  /* display: inline-block; */
+  position: relative;
+  text-align:left;
+  /* background-color: red; */
+  color: "#1E1E1E";
+  margin-top: -4%;
+}
+
+.qans{margin-left: 5%}
+
+.img1{
+  border-radius: 10%;
+  position: absolute;
+  top:400px;
+  right:100px;
+}
+
+.img3{
+  border-radius: 10%;
+  position: absolute;
+  bottom: -1300px;
+  right: 100px;
+}
+
+.img2{
+  border-radius: 10%;
+  position: absolute;
+  top:1200px;
+  right:100px;
+  width: 18%;
+  height: 20%;
 }
