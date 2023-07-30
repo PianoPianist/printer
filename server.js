@@ -44,6 +44,6 @@ app.get("/choose",function(req,res){
   res.render("choose")
 })
 
-app.get("/print",function(req,res){
-  res.render("index")
+app.get("/centres",function(req,res){
+  res.render("centres")
 })
